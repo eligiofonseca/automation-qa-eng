@@ -1,0 +1,761 @@
+{
+	"id": "b3c59926-4cf4-430f-b72e-90c3ad790f17",
+	"name": "Simple Books API",
+	"timestamp": "2024-03-08T01:36:42.402Z",
+	"collection_id": "33461924-e4699ba2-58b5-4fce-99ac-4817a091c614",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 74,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-08T01:36:37.874Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a3dcdf89-1ad5-4bae-a827-93d96023e70f",
+			"name": "home",
+			"url": "https://simple-books-api.glitch.me",
+			"time": 499,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 200": true,
+				"Response is in JSON format": true,
+				"Response has the required fields": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is in JSON format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				499
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 200": true,
+					"Response is in JSON format": true,
+					"Response has the required fields": true,
+					"Message is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "0e63a7c2-1138-450a-96a8-e1fc0c6d3533",
+			"name": "status",
+			"url": "https://simple-books-api.glitch.me/status",
+			"time": 111,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 200": true,
+				"Response is in JSON format": true,
+				"Response has the required fields": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is in JSON format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				111
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 200": true,
+					"Response is in JSON format": true,
+					"Response has the required fields": true,
+					"Message is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "47c15b79-7380-47d3-bb88-dd92d0dde3b8",
+			"name": "List of Books",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 108,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 200": true,
+				"Response is in JSON format": true,
+				"Body matches string": true,
+				"Response has the required fields": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is in JSON format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				108
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 200": true,
+					"Response is in JSON format": true,
+					"Body matches string": true,
+					"Response has the required fields": true,
+					"Message is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "756679ce-07b4-44a1-a981-ef4d550b0188",
+			"name": "List of Books: (type, limit)",
+			"url": "https://simple-books-api.glitch.me/books?type=fiction&limit=1",
+			"time": 200,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 200": true,
+				"Check if the response array is not empty": true,
+				"Check 'id' for object at index 0": true,
+				"Check 'name' for object at index 0": true,
+				"Check 'type' for object at index 0": true,
+				"Check 'available' for object at index 0": true,
+				"Check if the response array is limited to two items": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if the response array is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check 'id' for object at index 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check 'name' for object at index 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check 'type' for object at index 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check 'available' for object at index 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if the response array is limited to two items": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				200
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 200": true,
+					"Check if the response array is not empty": true,
+					"Check 'id' for object at index 0": true,
+					"Check 'name' for object at index 0": true,
+					"Check 'type' for object at index 0": true,
+					"Check 'available' for object at index 0": true,
+					"Check if the response array is limited to two items": true
+				}
+			]
+		},
+		{
+			"id": "68670196-e469-4600-b3b3-7a5eff573870",
+			"name": "Single Book ID",
+			"url": "https://simple-books-api.glitch.me/books/4",
+			"time": 93,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"ISBN is not available, skipping related tests": true,
+				"Data types of specific fields": true,
+				"ID is greater than 0": true,
+				"Price is greater than 0": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ISBN is not available, skipping related tests": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data types of specific fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ID is greater than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is greater than 0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				93
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"ISBN is not available, skipping related tests": true,
+					"Data types of specific fields": true,
+					"ID is greater than 0": true,
+					"Price is greater than 0": true
+				}
+			]
+		},
+		{
+			"id": "e3a1caa6-b51b-427a-8de1-bd64dc5d1d0d",
+			"name": "Register API Client",
+			"url": "https://simple-books-api.glitch.me/api-clients",
+			"time": 130,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 201": true,
+				"Check if 'accessToken' is present": true,
+				"Check if 'accessToken' is a string": true,
+				"Check if 'accessToken' has a valid format": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'accessToken' is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'accessToken' is a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'accessToken' has a valid format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				130
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 201": true,
+					"Check if 'accessToken' is present": true,
+					"Check if 'accessToken' is a string": true,
+					"Check if 'accessToken' has a valid format": true
+				}
+			]
+		},
+		{
+			"id": "bfccc992-eb1b-4b61-be5b-7978b0faf88f",
+			"name": "Order Book 1",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 312,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 201": true,
+				"Check if 'created' is a boolean and has a value of true": true,
+				"Check if 'orderId' is present and is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'created' is a boolean and has a value of true": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'orderId' is present and is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				312
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 201": true,
+					"Check if 'created' is a boolean and has a value of true": true,
+					"Check if 'orderId' is present and is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "2dd226bd-ac12-46aa-8d45-e2a2dff6cb92",
+			"name": "Get Existing Book Order by ID",
+			"url": "https://simple-books-api.glitch.me/orders/OnLXI13fWyd6qjSm4To99",
+			"time": 189,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 200": true,
+				"Check if 'id' is present, is a non-empty string, and has a valid format": true,
+				"Check if 'bookId' is present and is a number": true,
+				"Check if 'customerName' is present, is a string, and is not an empty string": true,
+				"Check if 'createdBy' is present, is a string, and is not an empty string": true,
+				"Check if 'quantity' is present and is a number": true,
+				"Check if 'timestamp' is present and is a number": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'id' is present, is a non-empty string, and has a valid format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'bookId' is present and is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'customerName' is present, is a string, and is not an empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'createdBy' is present, is a string, and is not an empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'quantity' is present and is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'timestamp' is present and is a number": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				189
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 200": true,
+					"Check if 'id' is present, is a non-empty string, and has a valid format": true,
+					"Check if 'bookId' is present and is a number": true,
+					"Check if 'customerName' is present, is a string, and is not an empty string": true,
+					"Check if 'createdBy' is present, is a string, and is not an empty string": true,
+					"Check if 'quantity' is present and is a number": true,
+					"Check if 'timestamp' is present and is a number": true
+				}
+			]
+		},
+		{
+			"id": "8497a83f-83d8-4bcc-b11f-bd7158b4a0bc",
+			"name": "Get All Existing Book Orders",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 107,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 200": true,
+				"Check if the response array is not empty": true,
+				"Check properties for object at index 0": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if the response array is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check properties for object at index 0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				107
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 200": true,
+					"Check if the response array is not empty": true,
+					"Check properties for object at index 0": true
+				}
+			]
+		},
+		{
+			"id": "29f14281-6ffa-41a9-86d5-08e3c91dd08a",
+			"name": "Update Existing Book Order ID: Customer Name",
+			"url": "https://simple-books-api.glitch.me/orders/OnLXI13fWyd6qjSm4To99",
+			"time": 254,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 204": true,
+				"Response body is null": true,
+				"Response does not contain sensitive information": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response does not contain sensitive information": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				254
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 204": true,
+					"Response body is null": true,
+					"Response does not contain sensitive information": true
+				}
+			]
+		},
+		{
+			"id": "c090d210-c14e-4832-98f4-541b118ed474",
+			"name": "Delete Existing Book Order ID - Fail Use Case",
+			"url": "https://simple-books-api.glitch.me/orders/Kq_DzfoiOzXj8Xt5O4NzT",
+			"time": 296,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 404": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 404": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "4b39946f-2812-4a99-8f23-5b03eaf1b401",
+			"name": "Order Book 2 - To Delete",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 425,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 201": true,
+				"Check if 'created' is a boolean and has a value of true": true,
+				"Check if 'orderId' is present and is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'created' is a boolean and has a value of true": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if 'orderId' is present and is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				425
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 201": true,
+					"Check if 'created' is a boolean and has a value of true": true,
+					"Check if 'orderId' is present and is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "ac7bd860-4479-41ff-9377-3207fcce3dac",
+			"name": "Delete Existing Book Order ID - Success Use Case",
+			"url": "https://simple-books-api.glitch.me/orders/ut2ki2U3t0ZcVpp5doK15",
+			"time": 374,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response time is less than 700ms": true,
+				"Response status code is 204": true,
+				"Response body is null": true,
+				"Verify that the orderId is removed from the database": true,
+				"Response body is empty": true,
+				"Verify that the response does not contain any sensitive information": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 700ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the orderId is removed from the database": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the response does not contain any sensitive information": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				374
+			],
+			"allTests": [
+				{
+					"Response time is less than 700ms": true,
+					"Response status code is 204": true,
+					"Response body is null": true,
+					"Verify that the orderId is removed from the database": true,
+					"Response body is empty": true,
+					"Verify that the response does not contain any sensitive information": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3098,
+	"collection": {
+		"requests": [
+			{
+				"id": "a3dcdf89-1ad5-4bae-a827-93d96023e70f",
+				"method": "GET"
+			},
+			{
+				"id": "0e63a7c2-1138-450a-96a8-e1fc0c6d3533",
+				"method": "GET"
+			},
+			{
+				"id": "47c15b79-7380-47d3-bb88-dd92d0dde3b8",
+				"method": "GET"
+			},
+			{
+				"id": "756679ce-07b4-44a1-a981-ef4d550b0188",
+				"method": "GET"
+			},
+			{
+				"id": "68670196-e469-4600-b3b3-7a5eff573870",
+				"method": "GET"
+			},
+			{
+				"id": "e3a1caa6-b51b-427a-8de1-bd64dc5d1d0d",
+				"method": "POST"
+			},
+			{
+				"id": "bfccc992-eb1b-4b61-be5b-7978b0faf88f",
+				"method": "POST"
+			},
+			{
+				"id": "2dd226bd-ac12-46aa-8d45-e2a2dff6cb92",
+				"method": "GET"
+			},
+			{
+				"id": "8497a83f-83d8-4bcc-b11f-bd7158b4a0bc",
+				"method": "GET"
+			},
+			{
+				"id": "29f14281-6ffa-41a9-86d5-08e3c91dd08a",
+				"method": "PATCH"
+			},
+			{
+				"id": "c090d210-c14e-4832-98f4-541b118ed474",
+				"method": "DELETE"
+			},
+			{
+				"id": "4b39946f-2812-4a99-8f23-5b03eaf1b401",
+				"method": "POST"
+			},
+			{
+				"id": "ac7bd860-4479-41ff-9377-3207fcce3dac",
+				"method": "DELETE"
+			}
+		]
+	}
+}

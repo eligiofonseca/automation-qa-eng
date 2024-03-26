@@ -1,0 +1,1141 @@
+{
+	"info": {
+		"_postman_id": "e4699ba2-58b5-4fce-99ac-4817a091c614",
+		"name": "Simple Books API",
+		"description": "[https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md](https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md)\n\n[https://learning.postman.com/docs/writing-scripts/test-scripts/](https://learning.postman.com/docs/writing-scripts/test-scripts/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33461924"
+	},
+	"item": [
+		{
+			"name": "home",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Response is in JSON format\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"  const responseData = pm.response.json();",
+							"  ",
+							"  pm.expect(responseData).to.be.an('object');",
+							"  pm.expect(responseData.message).to.exist;",
+							"});",
+							"",
+							"pm.test(\"Message is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.message).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}",
+					"host": [
+						"{{baseUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Response is in JSON format\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.status).to.exist;",
+							"});",
+							"",
+							"pm.test(\"Message is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.status).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/status",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Response is in JSON format\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"The Russian\");",
+							"});",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"  const responseData = pm.response.json();",
+							"  ",
+							"  pm.expect(responseData[0]).to.be.an('object');",
+							"  pm.expect(responseData[0].type).to.exist;",
+							"});",
+							"",
+							"pm.test(\"Message is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData[0]).to.be.an('object');",
+							"    pm.expect(responseData[0].type).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"  const responseData = pm.response.json();",
+							"  ",
+							"  pm.expect(responseData[1]).to.be.an('object');",
+							"  pm.expect(responseData[1].name).to.exist;",
+							"});",
+							"",
+							"pm.test(\"Message is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData[1]).to.be.an('object');",
+							"    pm.expect(responseData[1].name).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"  const responseData = pm.response.json();",
+							"  ",
+							"  pm.expect(responseData[0]).to.be.an('object');",
+							"  pm.expect(responseData[0].available).to.exist;",
+							"});",
+							"",
+							"pm.test(\"Message is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData[2]).to.be.an('object');",
+							"    pm.expect(responseData[2].available).to.be.true;",
+							"});",
+							"",
+							"pm.test(\"Message is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData[1]).to.be.an('object');",
+							"    pm.expect(responseData[1].available).to.be.false;",
+							"});",
+							"",
+							"// const response = pm.response.json();",
+							"// const myBook = response.filter((book) => book.available === true);",
+							"// pm.globals.set(\"bookIdAuto\", myBook[0].id);",
+							"",
+							"// Parse the response JSON",
+							"const response = pm.response.json();",
+							"",
+							"// Filter books where available is true",
+							"const availableBooks = response.filter(book => book.available === true);",
+							"",
+							"// Check if there are available books",
+							"if (availableBooks.length > 0) {",
+							"    // Randomly select a book",
+							"    const randomIndex = Math.floor(Math.random() * availableBooks.length);",
+							"    const selectedBook = availableBooks[randomIndex];",
+							"",
+							"    // Set the selected book's ID as a global variable",
+							"    pm.globals.set(\"bookIdAuto\", selectedBook.id);",
+							"} else {",
+							"    console.error(\"No available books in the response\");",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/books",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Books: (type, limit)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"// Parse the response JSON",
+							"const responseDataArray = pm.response.json();",
+							"",
+							"// Check if the array is not empty",
+							"pm.test(\"Check if the response array is not empty\", function () {",
+							"    pm.expect(responseDataArray).to.be.an('array');",
+							"    pm.expect(responseDataArray.length).to.be.above(0);",
+							"});",
+							"",
+							"// Test for each object in the array",
+							"responseDataArray.forEach((responseData, index) => {",
+							"    // Test if \"id\" is present and is a number",
+							"    pm.test(`Check 'id' for object at index ${index}`, function () {",
+							"        pm.expect(responseData.id).to.exist;",
+							"        pm.expect(responseData.id).to.be.a('number');",
+							"    });",
+							"",
+							"    // Test if \"name\" is present and is a string",
+							"    pm.test(`Check 'name' for object at index ${index}`, function () {",
+							"        pm.expect(responseData.name).to.exist;",
+							"        pm.expect(responseData.name).to.be.a('string');",
+							"    });",
+							"",
+							"    // Test if \"type\" is present and is a string",
+							"    pm.test(`Check 'type' for object at index ${index}`, function () {",
+							"        pm.expect(responseData.type).to.exist;",
+							"        pm.expect(responseData.type).to.be.a('string');",
+							"        pm.expect(responseData.type).to.include(\"fiction\");",
+							"    });",
+							"",
+							"    // Test if \"available\" is present and is a boolean",
+							"    pm.test(`Check 'available' for object at index ${index}`, function () {",
+							"        pm.expect(responseData.available).to.exist;",
+							"        pm.expect(responseData.available).to.be.a('boolean');",
+							"    });",
+							"});",
+							"",
+							"// Test if the number of items in the array is limited to two",
+							"pm.test(\"Check if the response array is limited to two items\", function () {",
+							"    pm.expect(responseDataArray.length).to.be.at.most(1);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/books?type=fiction&limit=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "fiction",
+							"description": "Optional: Genre (fiction or non-fiction available)\n"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Book ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"// Parse the response JSON",
+							"const responseData = pm.response.json();",
+							"",
+							"// Test if the response has the required fields",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    pm.expect(responseData).to.have.property(\"id\");",
+							"    pm.expect(responseData).to.have.property(\"name\");",
+							"    pm.expect(responseData).to.have.property(\"author\");",
+							"    pm.expect(responseData).to.have.property(\"type\");",
+							"    pm.expect(responseData).to.have.property(\"price\");",
+							"    pm.expect(responseData).to.have.property(\"current-stock\");",
+							"    pm.expect(responseData).to.have.property(\"available\");",
+							"});",
+							"",
+							"// Test data types of specific fields",
+							"pm.test(\"Data types of specific fields\", function () {",
+							"    pm.expect(responseData.id).to.be.a(\"number\");",
+							"    pm.expect(responseData.name).to.be.a(\"string\");",
+							"    pm.expect(responseData.author).to.be.a(\"string\");",
+							"    pm.expect(responseData.type).to.be.a(\"string\");",
+							"    pm.expect(responseData.price).to.be.a(\"number\");",
+							"    pm.expect(responseData[\"current-stock\"]).to.be.a(\"number\");",
+							"    pm.expect(responseData.available).to.be.a(\"boolean\");",
+							"",
+							"    // Check if \"isbn\" is present and is a string",
+							"    if (responseData.isbn) {",
+							"        pm.expect(responseData.isbn).to.be.a(\"string\");",
+							"    } else {",
+							"        pm.test(\"ISBN is not available, skipping related tests\", function () {",
+							"            pm.expect(true).to.be.true; // Placeholder assertion for a skipped test",
+							"        });",
+							"        return;",
+							"    }",
+							"});",
+							"",
+							"// Test if the id is greater than 0",
+							"pm.test(\"ID is greater than 0\", function () {",
+							"    pm.expect(responseData.id).to.be.above(0);",
+							"});",
+							"",
+							"// Test if the price is greater than 0",
+							"pm.test(\"Price is greater than 0\", function () {",
+							"    pm.expect(responseData.price).to.be.above(0);",
+							"});",
+							"",
+							"// Test if \"current-stock\" is greater than 0",
+							"pm.test(\"Current Stock is greater than 0\", function () {",
+							"    pm.expect(responseData[\"current-stock\"]).to.be.above(0);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/books/:bookId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"books",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "{{bookIdAuto}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register API Client",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 201\", function () {",
+							"  pm.expect(pm.response.code).to.equal(201);",
+							"});",
+							"",
+							"pm.test(\"Check if 'accessToken' is present\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    // Check if \"accessToken\" field exists in the response",
+							"    pm.expect(responseData.accessToken).to.exist;",
+							"});",
+							"",
+							"pm.test(\"Check if 'accessToken' is a string\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    // Check if the value of \"accessToken\" is a string",
+							"    pm.expect(responseData.accessToken).to.be.a('string');",
+							"});",
+							"",
+							"pm.test(\"Check if 'accessToken' has a valid format\", function () {",
+							"    const responseData = pm.response.json();",
+							"    const accessTokenRegex = /^[a-f0-9]{64}$/; // Assuming it's a 64-character hexadecimal string",
+							"",
+							"    // Check if the value of \"accessToken\" matches the expected format",
+							"    pm.expect(responseData.accessToken).to.match(accessTokenRegex);",
+							"});",
+							"",
+							"// Parse the response JSON",
+							"const responseData = pm.response.json();",
+							"// Set the \"accessToken\" as a global variable",
+							"pm.globals.set(\"accessTokenAuto\", responseData.accessToken);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientName\": \"{{$randomFullName}}\",\r\n    \"clientEmail\": \"{{$randomEmail}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api-clients",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api-clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Book 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 201\", function () {",
+							"  pm.expect(pm.response.code).to.equal(201);",
+							"});",
+							"",
+							"",
+							"// Parse the response JSON",
+							"const responseData = pm.response.json();",
+							"",
+							"// Test if \"created\" is a boolean and has a value of true",
+							"pm.test(\"Check if 'created' is a boolean and has a value of true\", function () {",
+							"    pm.expect(responseData.created).to.be.a('boolean');",
+							"    pm.expect(responseData.created).to.equal(true);",
+							"});",
+							"",
+							"// Test if \"orderId\" is present and is a non-empty string",
+							"pm.test(\"Check if 'orderId' is present and is a non-empty string\", function () {",
+							"    pm.expect(responseData.orderId).to.exist;",
+							"    pm.expect(responseData.orderId).to.be.a('string');",
+							"    pm.expect(responseData.orderId).to.not.be.empty;",
+							"    pm.expect(responseData.orderId).to.match(/^[a-zA-Z0-9_-]+$/);",
+							"});",
+							"",
+							"",
+							"// Check if \"created\" is true and \"orderId\" is present",
+							"if (responseData.created && responseData.orderId) {",
+							"    // Set the \"orderId\" as a global variable",
+							"    pm.globals.set(\"orderIdAuto\", responseData.orderId);",
+							"} else {",
+							"    console.error(\"Invalid response structure. 'created' should be true and 'orderId' should be present.\");",
+							"}",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessTokenAuto}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\": {{bookIdAuto}},\r\n    \"customerName\": \"{{$randomFullName}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Existing Book Order by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"// Parse the response JSON",
+							"const responseData = pm.response.json();",
+							"",
+							"// Test if \"id\" is present, is a non-empty string, and has a valid format",
+							"pm.test(\"Check if 'id' is present, is a non-empty string, and has a valid format\", function () {",
+							"    pm.expect(responseData.id).to.exist;",
+							"    pm.expect(responseData.id).to.be.a('string');",
+							"    pm.expect(responseData.id).to.not.be.empty;",
+							"",
+							"    ",
+							"});",
+							"",
+							"// Test if \"bookId\" is present and is a number",
+							"pm.test(\"Check if 'bookId' is present and is a number\", function () {",
+							"    pm.expect(responseData.bookId).to.exist;",
+							"    pm.expect(responseData.bookId).to.be.a('number');",
+							"});",
+							"",
+							"// Test if \"customerName\" is present, is a string, and is not an empty string",
+							"pm.test(\"Check if 'customerName' is present, is a string, and is not an empty string\", function () {",
+							"    pm.expect(responseData.customerName).to.exist;",
+							"    pm.expect(responseData.customerName).to.be.a('string');",
+							"    pm.expect(responseData.customerName).to.not.be.empty;",
+							"});",
+							"",
+							"// Test if \"createdBy\" is present, is a string, and is not an empty string",
+							"pm.test(\"Check if 'createdBy' is present, is a string, and is not an empty string\", function () {",
+							"    pm.expect(responseData.createdBy).to.exist;",
+							"    pm.expect(responseData.createdBy).to.be.a('string');",
+							"    pm.expect(responseData.createdBy).to.not.be.empty;",
+							"});",
+							"",
+							"// Test if \"quantity\" is present and is a number",
+							"pm.test(\"Check if 'quantity' is present and is a number\", function () {",
+							"    pm.expect(responseData.quantity).to.exist;",
+							"    pm.expect(responseData.quantity).to.be.a('number');",
+							"});",
+							"",
+							"// Test if \"timestamp\" is present and is a number",
+							"pm.test(\"Check if 'timestamp' is present and is a number\", function () {",
+							"    pm.expect(responseData.timestamp).to.exist;",
+							"    pm.expect(responseData.timestamp).to.be.a('number');",
+							"});",
+							"",
+							"//Check id for orderIdAuto, possible?"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessTokenAuto}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders/:orderId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{orderIdAuto}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Existing Book Orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"",
+							"// Parse the response JSON",
+							"const responseDataArray = pm.response.json();",
+							"",
+							"// Check if the array is not empty",
+							"pm.test(\"Check if the response array is not empty\", function () {",
+							"    pm.expect(responseDataArray).to.be.an('array');",
+							"    pm.expect(responseDataArray.length).to.be.above(0);",
+							"});",
+							"",
+							"// Iterate through each object in the array",
+							"responseDataArray.forEach((responseData, index) => {",
+							"    // Test for each object in the array",
+							"",
+							"    pm.test(`Check properties for object at index ${index}`, function () {",
+							"        // Test if \"id\" is present and is a non-empty string",
+							"        pm.expect(responseData.id).to.exist;",
+							"        pm.expect(responseData.id).to.be.a('string');",
+							"        pm.expect(responseData.id).to.not.be.empty;",
+							"",
+							"        // Test if \"bookId\" is present and is a number",
+							"        pm.expect(responseData.bookId).to.exist;",
+							"        pm.expect(responseData.bookId).to.be.a('number');",
+							"",
+							"        // Test if \"customerName\" is present, is a string, and is not an empty string",
+							"        pm.expect(responseData.customerName).to.exist;",
+							"        pm.expect(responseData.customerName).to.be.a('string');",
+							"        pm.expect(responseData.customerName).to.not.be.empty;",
+							"",
+							"        // Test if \"createdBy\" is present, is a string, and is not an empty string",
+							"        pm.expect(responseData.createdBy).to.exist;",
+							"        pm.expect(responseData.createdBy).to.be.a('string');",
+							"        pm.expect(responseData.createdBy).to.not.be.empty;",
+							"",
+							"        // Test if \"quantity\" is present and is a number",
+							"        pm.expect(responseData.quantity).to.exist;",
+							"        pm.expect(responseData.quantity).to.be.a('number');",
+							"",
+							"        // Test if \"timestamp\" is present and is a number",
+							"        pm.expect(responseData.timestamp).to.exist;",
+							"        pm.expect(responseData.timestamp).to.be.a('number');",
+							"    });",
+							"});",
+							"",
+							"//Check id for orderIdAuto, possible?",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessTokenAuto}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Existing Book Order ID: Customer Name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 204\", function () {",
+							"  pm.expect(pm.response.code).to.equal(204);",
+							"});",
+							"",
+							"pm.test(\"Response body is null\", function () {",
+							"    const responseData = xml2Json(pm.response.text());",
+							"    ",
+							"    pm.expect(responseData).to.be.null;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response does not contain sensitive information\", function () {",
+							"    const responseData = xml2Json(pm.response.text());",
+							"    ",
+							"    pm.expect(responseData).to.be.null;",
+							"});",
+							"",
+							"// Test to see if \"customerName\" was updated, possible?"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessTokenAuto}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerName\": \"{{$randomFullName}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders/:orderId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{orderIdAuto}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Book 2 - To Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 201\", function () {",
+							"  pm.expect(pm.response.code).to.equal(201);",
+							"});",
+							"",
+							"",
+							"// Parse the response JSON",
+							"const responseData = pm.response.json();",
+							"",
+							"// Test if \"created\" is a boolean and has a value of true",
+							"pm.test(\"Check if 'created' is a boolean and has a value of true\", function () {",
+							"    pm.expect(responseData.created).to.be.a('boolean');",
+							"    pm.expect(responseData.created).to.equal(true);",
+							"});",
+							"",
+							"// Test if \"orderId\" is present and is a non-empty string",
+							"pm.test(\"Check if 'orderId' is present and is a non-empty string\", function () {",
+							"    pm.expect(responseData.orderId).to.exist;",
+							"    pm.expect(responseData.orderId).to.be.a('string');",
+							"    pm.expect(responseData.orderId).to.not.be.empty;",
+							"});",
+							"",
+							"// Check if \"created\" is true and \"orderId\" is present",
+							"if (responseData.created && responseData.orderId) {",
+							"    // Set the \"orderId\" as a global variable",
+							"    pm.globals.set(\"orderIdAutoTwo\", responseData.orderId);",
+							"} else {",
+							"    console.error(\"Invalid response structure. 'created' should be true and 'orderId' should be present.\");",
+							"}",
+							"",
+							"//postman.setNextRequest(\"Delete Existing Book Order ID - Success Use Case\");",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessTokenAuto}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\": {{bookIdAuto}},\r\n    \"customerName\": \"{{$randomFullName}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Existing Book Order ID - Success Use Case",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 204\", function () {",
+							"  pm.expect(pm.response.code).to.equal(204);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response body is null\", function () {",
+							"    const responseData = xml2Json(pm.response.text());",
+							"    pm.expect(responseData).to.be.null;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Verify that the orderId is removed from the database\", function () {",
+							"    pm.expect(pm.response.code).to.equal(204);",
+							"    pm.expect(pm.response.text()).to.be.empty;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response body is empty\", function () {",
+							"    pm.expect(pm.response.text()).to.be.empty;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Verify that the response does not contain any sensitive information\", function () {",
+							"    const responseData = xml2Json(pm.response.text());",
+							"    pm.expect(responseData).to.be.null;",
+							"});",
+							"",
+							"//postman.setNextRequest(null);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessTokenAuto}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders/:orderId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{orderIdAutoTwo}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Existing Book Order ID - Fail Use Case",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 404\", function () {",
+							"  pm.expect(pm.response.code).to.equal(404);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"No order with id \");",
+							"});",
+							"",
+							"// Parse the response JSON",
+							"const responseData = pm.response.json();",
+							"",
+							"// Test if the response has the required fields for an error",
+							"pm.test(\"Response has the required error fields\", function () {",
+							"    pm.expect(responseData).to.have.property(\"error\");",
+							"});",
+							"",
+							"// Test data type and value of the \"error\" field",
+							"pm.test(\"Data type and value of the 'error' field\", function () {",
+							"    pm.expect(responseData.error).to.be.a(\"string\");",
+							"",
+							"    // Check for a specific error message pattern using a regular expression",
+							"   pm.expect(responseData.error).to.match(/^No order with id [a-zA-Z0-9_-]+[.]$/);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessTokenAuto}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders/:orderId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{orderIdAutoTwo}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Response time is less than 900ms\", function () {",
+					"  pm.expect(pm.response.responseTime).to.be.below(900);",
+					"});",
+					"",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://simple-books-api.glitch.me"
+		},
+		{
+			"key": "accessToken",
+			"value": "---",
+			"type": "string"
+		}
+	]
+}
