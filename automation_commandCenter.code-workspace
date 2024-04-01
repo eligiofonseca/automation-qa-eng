@@ -1,19 +1,7 @@
 {
 	"folders": [
 		{
-			"path": "mochajs"
-		},
-		{
-			"path": "selenium"
-		},
-		{
-			"path": "webdriverIO"
-		},
-		{
-			"path": "postman"
-		},
-		{
-			"path": "cucumber_dev"
+			"path": "."
 		}
 	],
 	"settings": {}
