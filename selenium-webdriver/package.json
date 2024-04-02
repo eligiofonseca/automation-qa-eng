@@ -1,7 +1,6 @@
 {
-  "name": "selenium",
+  "name": "selenium-webdriver",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +8,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "description": "",
   "dependencies": {
-    "selenium-webdriver": "^4.18.1"
+    "selenium-webdriver": "^4.19.0"
   }
 }

@@ -1,5 +1,4 @@
 const { Builder, By } = require("selenium-webdriver");
-//  cd /c/Users/lf549/selenium
 //  node test/test.js
 
 
