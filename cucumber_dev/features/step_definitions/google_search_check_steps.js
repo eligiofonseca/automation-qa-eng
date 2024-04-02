@@ -34,5 +34,3 @@ Then('the page title should start with {string}', {timeout: 60 * 1000}, async fu
 AfterAll(async function(){
     await driver.quit();
 });
-
-//https://cucumber.io/docs/guides/browser-automation/?lang=javascript
