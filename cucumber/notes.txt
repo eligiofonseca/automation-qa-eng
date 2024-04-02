@@ -1,3 +1,9 @@
 https://www.npmjs.com/package/@cucumber/cucumber
     npx cucumber-js
     npm test
+
+    https://stackoverflow.com/questions/46903002/move-a-module-from-devdependencies-to-dependencies-in-npm-package-json
+
+
+    $ npm view chai versions
+    $ npm view chai versions

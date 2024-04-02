@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber"
+    "test": "cucumber-js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@cucumber/cucumber": "^10.3.1",
+    "@cucumber/cucumber": "^10.3.2",
     "chai": "^4.3.4",
-    "chromedriver": "^123.0.0"
+    "chromedriver": "^123.0.1"
   },
   "dependencies": {
-    "selenium-webdriver": "^4.18.1"
+    "selenium-webdriver": "^4.19.0"
   }
 }
