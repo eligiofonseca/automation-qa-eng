@@ -1,0 +1,16 @@
+https://medium.com/@mpgelber7495/a-step-by-step-guide-to-setting-up-selenium-webdriver-with-node-js-1167bca35c38
+https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH&ch=1#downloads
+https://github.com/mozilla/geckodriver/releases
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
+.bash_profile {
+    export PATH=$PATH:/Users/USER/Downloads/
+}
+
+node test/test2.js
+node --experimental-modules test/test3.js
+    ,"type": "module" // Add this line
+
+
+https://www.seleniumhq.org/selenium-ide/docs/en/introduction/command-line-runner/
+    $ selenium-side-runner /c/Users/lf549/automation_qa_eng/selenium-webdriver/seleniumIDE_GoogleProject.side

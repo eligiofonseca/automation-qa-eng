@@ -1,0 +1,120 @@
+{
+  "id": "cfee4094-da57-4489-ac07-234b3e117ab1",
+  "version": "2.0",
+  "name": "seleniumIDE_GoogleProject",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "adfa6139-ce09-434c-95bb-4d95a8e28b57",
+    "name": "google_feelingLucky_searchTerm_about",
+    "commands": [{
+      "id": "f5d121fa-1776-4fad-94f8-caa8ae70a4be",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31b28669-8d6f-46ab-8703-59b892d07e18",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2063x1120",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "add74194-0598-456c-b4aa-53f1dab51ddf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Store",
+      "targets": [
+        ["linkText=Store", "linkText"],
+        ["css=.MV3Tnb:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Store')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cfd9350-fdab-4e45-893d-e61f2585674a",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "162575a3-3b3d-4191-a131-5c4c2578e387",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4ea095f-a5a1-474c-9e43-eec2f4452ec6",
+      "comment": "",
+      "command": "click",
+      "target": "css=bento-dialog",
+      "targets": [
+        ["css=bento-dialog", "css:finder"],
+        ["xpath=//body[@id='yDmH0d']/bento-dialog", "xpath:idRelative"],
+        ["xpath=//bento-dialog", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c340dbf8-d44c-449e-be3c-c29b29b49834",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tQMs9",
+      "targets": [
+        ["css=.tQMs9", "css:finder"],
+        ["xpath=//div[@id='kO001e']/div[2]/div[2]/div/c-wiz/div/div[2]/a/div", "xpath:idRelative"],
+        ["xpath=//c-wiz/div/div[2]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85078ceb-cfcc-4937-967e-1e75273ee949",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.tQMs9",
+      "targets": [
+        ["css=.tQMs9", "css:finder"],
+        ["xpath=//div[@id='kO001e']/div[2]/div[2]/div/c-wiz/div/div[2]/a/div", "xpath:idRelative"],
+        ["xpath=//c-wiz/div/div[2]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddf69679-8773-4bcb-bfc3-4846f74a63cd",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.tQMs9",
+      "targets": [
+        ["css=.tQMs9", "css:finder"],
+        ["xpath=//div[@id='kO001e']/div[2]/div[2]/div/c-wiz/div/div[2]/a/div", "xpath:idRelative"],
+        ["xpath=//c-wiz/div/div[2]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c772e102-2fe6-43ed-9db1-51edb0b2ec47",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8592a62b-f879-4f12-89f1-c69686602004",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["adfa6139-ce09-434c-95bb-4d95a8e28b57"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

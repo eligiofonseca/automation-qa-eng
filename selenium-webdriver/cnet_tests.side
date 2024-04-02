@@ -1,0 +1,90 @@
+{
+  "id": "51ffea38-0b7c-4576-a21d-214ce70f3a46",
+  "version": "2.0",
+  "name": "cnet_tests",
+  "url": "https://www.cnet.com",
+  "tests": [{
+    "id": "333f3b5f-8f39-4320-8071-ba04a6ba82a4",
+    "name": "Home Internet Article Open",
+    "commands": [{
+      "id": "d468354e-c360-4d26-9454-d91bf5a70b4d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3dcf782-b138-4303-89fd-762bba4f7953",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "789x531",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f1c486c-0a0b-4a83-9f9a-0971b1f0118d",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > span",
+      "targets": [
+        ["css=li:nth-child(1) > span", "css:finder"],
+        ["xpath=//header[@id='siteNav']/nav/div/ul/li/span", "xpath:idRelative"],
+        ["xpath=//li/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Tech')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1ef7125-5768-435b-96d5-b64f275efc42",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > span",
+      "targets": [
+        ["css=li:nth-child(2) > span", "css:finder"],
+        ["xpath=//header[@id='siteNav']/nav/div/ul/li[2]/span", "xpath:idRelative"],
+        ["xpath=//li[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Money')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae6de152-808e-4c8f-bbad-19f0f9249475",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(3) > span",
+      "targets": [
+        ["css=li:nth-child(3) > span", "css:finder"],
+        ["xpath=//header[@id='siteNav']/nav/div/ul/li[3]/span", "xpath:idRelative"],
+        ["xpath=//li[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b031f53-f8a7-404c-acd6-eca53bcfe37c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-storiesNeonLatest_story:nth-child(1) .c-storiesNeonLatest_hed",
+      "targets": [
+        ["css=.c-storiesNeonLatest_story:nth-child(1) .c-storiesNeonLatest_hed", "css:finder"],
+        ["xpath=//div[@id='__layout']/div/main/div/div/div/div/div/div[3]/div/div[2]/a/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Best Online Glasses and Contacts Deals: Save on Designer Brands, Transition Lenses and More')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e58dc951-b61b-4ab7-976c-87b479f58a06",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ca9dd488-1d79-482a-9649-c7bdcf94bee7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["333f3b5f-8f39-4320-8071-ba04a6ba82a4"]
+  }],
+  "urls": ["https://www.cnet.com/"],
+  "plugins": []
+}
