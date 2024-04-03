@@ -1,0 +1,11 @@
++----+-----------------+-----+----------------+
+| id |      name       | age |    twitter     |
++----+-----------------+-----+----------------+
+| 1  | Justin Bieber   | 29  | @JB1_forU      |
+| 2  | Beyonce Knowles | 42  | @BeeHiveRiseUp |
+| 3  | Jeremy Lin      | 35  | @JLin_Rocket   |
+| 4  | Taylor Swift    | 33  | @Tswizzle      |
+| 5  | Eligio Fonseca  | 39  | @eli_fjr       |
+| 6  | Denzel W.       | 55  | @denzel        |
+| 7  | Yo Mama         | 21  | @LookBehindU   |
++----+-----------------+-----+----------------+
