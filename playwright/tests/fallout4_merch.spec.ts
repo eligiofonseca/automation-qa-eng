@@ -1,3 +1,4 @@
+// @ts-check
 import { test, expect } from '@playwright/test';
 
 test('Vault 33 Pin H1', async ({ page }) => {
