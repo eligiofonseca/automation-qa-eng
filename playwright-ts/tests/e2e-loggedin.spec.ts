@@ -1,3 +1,4 @@
+//To Run: Comment out all browsers in config file first.
 // @ts-check
 import { test, expect } from '@playwright/test';
 
