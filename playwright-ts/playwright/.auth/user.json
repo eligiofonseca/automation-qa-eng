@@ -2,20 +2,30 @@
   "cookies": [
     {
       "name": "WMF-Last-Access",
-      "value": "17-Apr-2024",
+      "value": "23-Apr-2024",
       "domain": "en.wikipedia.org",
       "path": "/",
-      "expires": 1716078970.748768,
+      "expires": 1716640526.501536,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "WMF-Last-Access-Global",
-      "value": "17-Apr-2024",
+      "value": "23-Apr-2024",
       "domain": ".wikipedia.org",
       "path": "/",
-      "expires": 1716078970.749394,
+      "expires": 1716640526.502357,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "WMF-DP",
+      "value": "572",
+      "domain": "en.wikipedia.org",
+      "path": "/",
+      "expires": 1713918926.502455,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
@@ -35,14 +45,14 @@
       "value": "0.001",
       "domain": "en.wikipedia.org",
       "path": "/",
-      "expires": 1713318033.156353,
+      "expires": 1713900233.538871,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "enwikimwuser-sessionId",
-      "value": "af232c7950b90cbed4d8",
+      "value": "0ffa2f30c582a664a2a1",
       "domain": "en.wikipedia.org",
       "path": "/",
       "expires": -1,
@@ -55,17 +65,17 @@
       "value": "1",
       "domain": "en.wikipedia.org",
       "path": "/",
-      "expires": 1713400828.656939,
+      "expires": 1713983028.969348,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "WMF-Last-Access",
-      "value": "17-Apr-2024",
+      "value": "23-Apr-2024",
       "domain": "login.wikimedia.org",
       "path": "/",
-      "expires": 1716076801.016574,
+      "expires": 1716638401.685257,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
@@ -85,14 +95,14 @@
       "value": "0.001",
       "domain": "login.wikimedia.org",
       "path": "/",
-      "expires": 1713318031.53551,
+      "expires": 1713900231.685445,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "enwikiSession",
-      "value": "c1vi9do395spb76f94gv6kqndoilbpg8",
+      "value": "djin8e5dp8hf7uq9clkil521v0cioel4",
       "domain": "en.wikipedia.org",
       "path": "/",
       "expires": -1,
@@ -101,51 +111,11 @@
       "sameSite": "None"
     },
     {
-      "name": "enwikiUserID",
-      "value": "47708719",
-      "domain": "en.wikipedia.org",
-      "path": "/",
-      "expires": 1715906431.7529,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "enwikiUserName",
-      "value": "Efonsecajr",
-      "domain": "en.wikipedia.org",
-      "path": "/",
-      "expires": 1715906431.75302,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "centralauth_User",
-      "value": "Efonsecajr",
-      "domain": ".wikipedia.org",
-      "path": "/",
-      "expires": 1715906431.753125,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "loginnotify_prevlogins",
-      "value": "2024-1jpz7n6-czpcfm40aqdmy6svjq1r4xte581zo91",
-      "domain": "en.wikipedia.org",
-      "path": "/",
-      "expires": 1728866431.374004,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "Lax"
-    },
-    {
       "name": "cpPosIndex",
-      "value": "1%401713314431%23de47e1febe2e68fdba798998075ada99",
+      "value": "1%401713896631%23de47e1febe2e68fdba798998075ada99",
       "domain": "en.wikipedia.org",
       "path": "/",
-      "expires": 1713314441.374103,
+      "expires": 1713896642.955157,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
@@ -155,70 +125,10 @@
       "value": "master",
       "domain": "en.wikipedia.org",
       "path": "/",
-      "expires": 1713314441.374161,
+      "expires": 1713896642.955252,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
-    },
-    {
-      "name": "loginwikiSession",
-      "value": "erlrsipq51gkconab4kuk8gbsqrqd9mu",
-      "domain": "login.wikimedia.org",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "loginwikiUserID",
-      "value": "86631330",
-      "domain": "login.wikimedia.org",
-      "path": "/",
-      "expires": 1715906431.535338,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "loginwikiUserName",
-      "value": "Efonsecajr",
-      "domain": "login.wikimedia.org",
-      "path": "/",
-      "expires": 1715906431.535397,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "centralauth_User",
-      "value": "Efonsecajr",
-      "domain": "login.wikimedia.org",
-      "path": "/",
-      "expires": 1715906431.535436,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "centralauth_Session",
-      "value": "84eaae56663217ad7481d2799a6230ef",
-      "domain": "login.wikimedia.org",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "centralauth_Session",
-      "value": "84eaae56663217ad7481d2799a6230ef",
-      "domain": ".wikipedia.org",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
     }
   ],
   "origins": [
@@ -226,20 +136,16 @@
       "origin": "https://en.wikipedia.org",
       "localStorage": [
         {
-          "name": "uls-previous-language-autonym",
-          "value": "English"
-        },
-        {
-          "name": "uls-previous-language-code",
-          "value": "en"
-        },
-        {
           "name": "wmE-sessionTickLastTickTime",
-          "value": "1713314428324"
+          "value": "1713896628683"
         },
         {
           "name": "wmE-sessionTickTickCount",
           "value": "1"
+        },
+        {
+          "name": "CentralAuthAnon",
+          "value": "1713983031512"
         }
       ]
     }

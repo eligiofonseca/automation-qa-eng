@@ -5,7 +5,8 @@ import path from 'path'
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// require('dotenv').config();
+
+require('dotenv').config();
 
 export const STORAGE_STATE = path.join(__dirname, 'playwright/.auth/user.json')
 
