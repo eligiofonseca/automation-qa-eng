@@ -36,4 +36,5 @@ With Playwright you can run a single test, a set of tests or all tests. Tests ca
 
 EX: npx playwright test --project=chromium --project=firefox --headed --ui
 EX2: npx playwright test example.spec.ts --project=chromium --project=firefox --headed --ui
+EX3: npx playwright test fallout_merch.spec.ts --headed --trace on --project=chromium
 

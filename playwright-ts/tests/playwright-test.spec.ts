@@ -1,12 +1,13 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-test.beforeEach(async ({ page }) => {
-    await page.goto('https://sdetunicorns.com/');
-});
-
 test.describe('Checking that the courses page is functional ', () => {
+    test.beforeEach(async ({ page }) => {
+        await page.goto('https://sdetunicorns.com/');
+    });
+
     test('Click on courses link', async ({ page }) => {
+        test.setTimeout(120000);
         // Get the Courses link and click on it
         await page.locator('#masthead').getByRole('link', { name: 'Courses' }).click();
         // Check that we are on the courses URL
@@ -14,6 +15,7 @@ test.describe('Checking that the courses page is functional ', () => {
     });
 
     test('Check course page elements', async ({ page }) => {
+        test.setTimeout(120000);
         // Get the Courses link and click on it
         await page.locator('#masthead').getByRole('link', { name: 'Courses' }).click();
         // Checks that the "Join Academy" button is visible
@@ -34,6 +36,10 @@ test.describe('Checking that the courses page is functional ', () => {
 });
 
 test.describe('Checking that the search func is ok ', () => {
+    test.beforeEach(async ({ page }) => {
+        await page.goto('https://sdetunicorns.com/');
+    });
+
     test('Search for term: Javascript', async ({ page }) => {
         await page.getByRole('button', { name: 'Search' }).click();
         await expect(page.getByRole('searchbox', { name: 'Search' })).toBeEmpty();
@@ -46,6 +52,9 @@ test.describe('Checking that the search func is ok ', () => {
 });
 
 test.describe('Global Nav', () => {
+    test.beforeEach(async ({ page }) => {
+        await page.goto('https://sdetunicorns.com/');
+    });
     test('Global Nav> Menu Item Clicky Check', async ({ page }) => {
         await page.locator('#masthead').getByRole('link', { name: 'Home' }).click();
         await page.locator('#masthead').getByRole('link', { name: 'Courses' }).click();
@@ -74,18 +83,32 @@ test.describe('Global Nav', () => {
 });
 
 
-test('Homepage>Smoke Test', async ({ page }) => {
-    await expect(page.locator('.elementor-widget-wrap > .elementor-section > .elementor-container > div > .elementor-widget-wrap > .elementor-element > .elementor-widget-container').first()).toBeVisible();
-    await page.getByRole('img', { name: 'automated software testing' }).first().click();
-    await page.getByText('The aim for all the course').click();
-    await expect(page.locator('#page')).toContainText('Completing the courses and their associated exercises will ensure you are able to crack automation related questions in an interview and showcase your skills in a new role.');
-    await page.getByRole('tab', { name: 'kunal mobile testimonial' }).click();
-    await page.getByRole('link', { name: 'Richard on API Automation' }).click();
-    await page.getByRole('tab', { name: 'Can I cancel anytime?' }).locator('i').first().click();
-    await page.locator('#colophon').getByRole('link', { name: 'Home' }).click();
+test.describe('Smoke Test', () => {
+    test.beforeEach(async ({ page }) => {
+        await page.goto('https://sdetunicorns.com/');
+    });
+    test('Homepage', async ({ page }) => {
+        test.setTimeout(120000);
+        await expect(page.locator('.elementor-widget-wrap > .elementor-section > .elementor-container > div > .elementor-widget-wrap > .elementor-element > .elementor-widget-container').first()).toBeVisible();
+        await page.getByRole('img', { name: 'automated software testing' }).first().click();
+        await page.getByText('The aim for all the course').click();
+        await expect(page.locator('#page')).toContainText('Completing the courses and their associated exercises will ensure you are able to crack automation related questions in an interview and showcase your skills in a new role.');
+        await page.getByRole('tab', { name: 'kunal mobile testimonial' }).click();
+        await page.getByRole('link', { name: 'Richard on API Automation' }).click();
+        await page.getByRole('tab', { name: 'Can I cancel anytime?' }).locator('i').first().click();
+        await page.locator('#colophon').getByRole('link', { name: 'Home' }).click();
     });
 
+});
+
 // test.describe('Test Suite', () => {
+    // test.beforeEach(async ({ page }) => {
+    //     await page.goto('https://sdetunicorns.com/');
+    // });
 //     test('Test Case', async ({ page }) => {
+//
+//     });
+//     test('Test Case', async ({ page }) => {
+//
 //     });
 // });

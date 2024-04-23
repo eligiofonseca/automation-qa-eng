@@ -7,6 +7,7 @@ test.beforeEach(async ({ page }) => {
 })
 
 test('menu', async ({ page }) => {
+    test.setTimeout(120000);
     await page.getByRole('link', { name: 'Efonsecajr' }).click();
     await expect(page.getByRole('heading', { name: /Efonsecajr/i })).toBeVisible();
     await page.getByRole('link', { name: 'Efonsecajr' }).click();
@@ -20,6 +21,7 @@ test('menu', async ({ page }) => {
 });
 
 test('logout', async ({ page }) => {
+    test.setTimeout(180000);
     await page.getByRole('button', { name: 'Personal tools' }).check();
     await page.getByRole('link', { name: 'Log out' }).click();
     await page.getByRole('heading', { name: 'Log out' }).click();
