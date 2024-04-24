@@ -32,6 +32,12 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+
+    // https://playwright.dev/docs/videos
+    video: {
+      mode: 'on',
+      size: { width: 1920, height: 1080 }
+    }
   },
 
   /* Configure projects for major browsers */
@@ -41,10 +47,11 @@ export default defineConfig({
       testMatch: '**/*.setup.ts'
     },
     {
-      name: 'e2e tests logged in',
+      name: 'e2e tests logged in with chromium',
       testMatch: '**/*loggedin.spec.ts',
       dependencies: ['setup'],
       use: {
+        ...devices['Desktop Chrome'],
         storageState: STORAGE_STATE,
       }
     },

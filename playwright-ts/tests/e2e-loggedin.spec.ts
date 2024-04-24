@@ -25,4 +25,8 @@ test('logout', async ({ page }) => {
     await page.getByRole('button', { name: 'Personal tools' }).check();
     await page.getByRole('link', { name: 'Log out' }).click();
     await page.getByRole('heading', { name: 'Log out' }).click();
+    await page.getByText('You are now logged out. This').click();
+    await page.getByRole('link', { name: 'Log in', exact: true }).click();
+    await page.goto('https://en.wikipedia.org/w/index.php?title=Special:UserLogout&returnto=Main+Page');
+    await expect(page.getByPlaceholder('Search Wikipedia')).toBeEmpty();
 })
