@@ -18,6 +18,6 @@ test('Vault 33 Pin Add/Remove From Cart', async ({ page }) => {
   await page.getByRole('button', { name: 'Add to cart' }).click();
   await page.getByRole('link', { name: 'Remove Fallout Vault 33 Pin' }).click();
   await page.getByText('Your cart is empty').click();
-  await page.screenshot({ path: './test-results/screenshot.png', fullPage: true });
+  await page.screenshot({ path: './test-results/falloutMerch_emptyCart.png', fullPage: true });
   await page.getByRole('link', { name: 'Continue shopping' }).click();
 });
